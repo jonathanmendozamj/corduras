@@ -1,0 +1,406 @@
+@charset "UTF-8";
+/* MIXINS */
+/* FIN MIXINS*/
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0; }
+
+/* Cuerpo principal */
+body {
+  width: 100vw;
+  max-width: 100%;
+  font-family: 'Noto Sans', sans-serif; }
+
+/* Estilo de los titulos */
+h1, h2, h3, h4, h5, h6 {
+  color: #AE3335;
+  text-align: center;
+  font-weight: bold; }
+
+/* Encabezado y elementos del mismo */
+.encabezado {
+  position: sticky;
+  top: 0;
+  background-color: black;
+  padding: 1.56rem;
+  z-index: 2; }
+
+/* NAV, LISTA E ITEMS */
+.navegador {
+  display: inline-block;
+  width: 100%;
+  background-color: black !important; }
+  .navegador .navegador__lista {
+    justify-content: space-between; }
+  .navegador .navegador__logo {
+    width: 3.5rem;
+    height: 3.5rem; }
+  .navegador .navegador__item {
+    /*text-align: center;
+        display: inline-block;*/
+    font-size: 1.125rem;
+    /*flex-grow: 2;*/ }
+
+/* FIN NAVS, LISTA E ITEMS */
+/* Pie de página y elementos del mismo */
+.piePagina {
+  background-color: black;
+  padding: 1.56rem;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  height: 10%; }
+
+.contenedorSeccionesPiePagina {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start; }
+
+.seccionPiePagina {
+  margin: 0.5rem 0 0.5rem 0; }
+
+.seccionPiePagina__titulo {
+  color: white;
+  text-align: left;
+  font-size: 0.9rem;
+  font-weight: bold; }
+
+.seccionPiePagina__parrafo {
+  color: white;
+  font-size: 0.875rem;
+  margin-bottom: 0; }
+
+.seccionPiePagina__parrafo--centrado {
+  color: white;
+  font-size: 0.875rem;
+  text-align: center; }
+
+.seccionPiePagina__iconos {
+  width: 2rem;
+  height: 2rem; }
+
+/* FIN PIE PAGINA */
+/* SECCION PRINCIPAL */
+main {
+  padding: 1.56rem;
+  background-color: white;
+  min-height: 400px; }
+
+/* FIN PRINCIPAL */
+/* GRILLA Y SECCIÓN DE IMÁGENES */
+.grillaImagenes {
+  padding: 0.1rem;
+  display: grid; }
+
+.seccionImagen {
+  background-color: #FFE5E5;
+  border-radius: 2rem;
+  padding: 1.1rem; }
+  .seccionImagen .seccionImagen__imagen {
+    width: 100%;
+    height: auto; }
+  .seccionImagen .seccionImagen__titulo {
+    color: #AE3335;
+    margin: 0;
+    text-align: left;
+    font-weight: bolder; }
+  .seccionImagen .seccionImagen__parrafo {
+    color: black; }
+
+/* FIN GRILLA Y SECCIÓN DE IMÁGENES */
+/* SECCIÓN ÍCONO FLOTANTE */
+.seccionIconoFlotante {
+  background-color: #25d366;
+  padding: 0.25rem;
+  border-radius: 3rem;
+  position: fixed;
+  z-index: 2;
+  right: 1.875rem;
+  bottom: 1.875rem; }
+
+.seccionIconoFlotante__imagen {
+  height: 3rem;
+  width: 3rem; }
+
+/* FIN SECCIÓN ÍCONO FLOTANTE*/
+.icono {
+  height: 0.875rem;
+  width: 0.875rem; }
+
+/* ARTÍCULOS */
+.articulo, .articulo--principal, .articulo--secundario {
+  border-radius: 2rem;
+  padding: 1.1rem; }
+  .articulo .articulo__titulo, .articulo--principal .articulo__titulo, .articulo--secundario .articulo__titulo {
+    color: black;
+    font-weight: bold; }
+  .articulo .articulo__parrafo, .articulo--principal .articulo__parrafo, .articulo--secundario .articulo__parrafo {
+    color: black;
+    font-size: large; }
+  .articulo .articulo__parrafo--acotacion, .articulo--principal .articulo__parrafo--acotacion, .articulo--secundario .articulo__parrafo--acotacion {
+    color: black;
+    font-size: small; }
+
+.articulo--principal {
+  background-color: #FFE5E5;
+  color: black; }
+  .articulo--principal .articulo__titulo {
+    color: #AE3335; }
+
+.articulo--secundario {
+  background-color: #F5F6F6;
+  color: black; }
+
+/* FIN ARTÍCULOS */
+/* ACCORDION */
+#articuloAccordion {
+  margin-top: 0.9rem; }
+
+.accordion-button:not(.collapsed) {
+  background-color: #AE3335;
+  color: white;
+  font-weight: bold; }
+
+.accordion-button:focus {
+  border-color: #FFE5E5;
+  box-shadow: 0 0 0.25rem #AE3335; }
+
+.accordion-body {
+  font-size: small; }
+
+/* FIN ACCORDION */
+/* CONTENEDOR DEL ITEM DEL FORMULARIO */
+.contenedorItemFormulario, .contenedorItemFormulario--checkbox {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0.625rem; }
+  .contenedorItemFormulario .contenedorItemFormulario__etiqueta, .contenedorItemFormulario--checkbox .contenedorItemFormulario__etiqueta {
+    width: 40%;
+    font-size: 1rem; }
+  .contenedorItemFormulario .contenedorItemFormulario__input, .contenedorItemFormulario--checkbox .contenedorItemFormulario__input {
+    width: 60%; }
+  .contenedorItemFormulario .contenedorItemFormulario__boton, .contenedorItemFormulario--checkbox .contenedorItemFormulario__boton {
+    width: 100%;
+    background-color: #AE3335;
+    color: white; }
+  .contenedorItemFormulario .contenedorItemFormulario__boton:hover, .contenedorItemFormulario--checkbox .contenedorItemFormulario__boton:hover {
+    background-color: white;
+    color: #AE3335; }
+
+.contenedorItemFormulario--checkbox {
+  justify-content: space-between; }
+
+/* FIN CONTENEDOR */
+#articuloImportante {
+  margin-top: 0.9rem; }
+
+/* DEFINICIÓN DE GRILLAS */
+#seccion1 {
+  grid-area: seccion1; }
+
+#seccion2 {
+  grid-area: seccion2; }
+
+#seccion3 {
+  grid-area: seccion3; }
+
+#seccion4 {
+  grid-area: seccion4; }
+
+#seccion5 {
+  grid-area: seccion5; }
+
+#seccion6 {
+  grid-area: seccion6; }
+
+#seccion7 {
+  grid-area: seccion7; }
+
+#seccion8 {
+  grid-area: seccion8; }
+
+#video {
+  grid-area: video; }
+
+#articulo1 {
+  grid-area: articulo1; }
+
+#articulo2 {
+  grid-area: articulo2; }
+
+/* FIN DEFINICIÓN GRILLAS */
+/* INICIO MEDIA QUERIES */
+@media only screen and (max-width: 600px) {
+  #seccionIndumentaria {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: "seccion1" "seccion2" "seccion3" "seccion4" "seccion5" "seccion6";
+    display: grid;
+    row-gap: 0.9rem;
+    column-gap: 0.9rem;
+    height: 100%; }
+  #seccionCalzado {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-areas: "seccion1" "seccion2" "seccion3" "seccion4" "seccion5" "seccion6" "seccion7" "seccion8";
+    display: grid;
+    row-gap: 0.9rem;
+    column-gap: 0.9rem;
+    height: 100%; }
+  #seccionSucursales {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "seccion1" "seccion2" "seccion3" "seccion4";
+    display: grid;
+    row-gap: 0.9rem;
+    column-gap: 0.9rem;
+    height: 100%; }
+  .mainHome {
+    grid-template-columns: 100%;
+    grid-template-rows: auto 1fr 1fr;
+    grid-template-areas: "video" "articulo1" "articulo2";
+    display: grid;
+    row-gap: 0.9rem;
+    column-gap: 0.9rem;
+    height: 100%; }
+  .contenedorSeccionesPiePagina {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: flex-start; }
+  .subseccionContacto {
+    width: 100%; }
+  #subseccionFormulario {
+    margin-bottom: 0.9rem; }
+  #subseccionDatosContacto {
+    margin-top: 0.9rem; }
+  /* CONTENEDOR DEL FORMULARIO */
+  .contenedorItemFormulario, .contenedorItemFormulario--checkbox {
+    flex-direction: column; }
+    .contenedorItemFormulario .contenedorItemFormulario__etiqueta, .contenedorItemFormulario--checkbox .contenedorItemFormulario__etiqueta {
+      width: 100%;
+      font-size: 0.8rem; }
+    .contenedorItemFormulario .contenedorItemFormulario__input, .contenedorItemFormulario--checkbox .contenedorItemFormulario__input {
+      width: 100%; }
+  .contenedorItemFormulario--checkbox {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.625rem;
+    justify-content: space-between; }
+  /* FIN CONTENEDOR */ }
+
+@media only screen and (min-width: 600px) {
+  #seccionIndumentaria {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: "seccion1" "seccion2" "seccion3" "seccion4" "seccion5" "seccion6";
+    display: grid;
+    row-gap: 0.9rem;
+    column-gap: 0.9rem;
+    height: 100%; }
+  #seccionCalzado {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-areas: "seccion1" "seccion2" "seccion3" "seccion4" "seccion5" "seccion6" "seccion7" "seccion8";
+    display: grid;
+    row-gap: 0.9rem;
+    column-gap: 0.9rem;
+    height: 100%; }
+  #seccionSucursales {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "seccion1 seccion2" "seccion3 seccion4";
+    display: grid;
+    row-gap: 0.9rem;
+    column-gap: 0.9rem;
+    height: 100%; }
+  .mainHome {
+    grid-template-columns: 100%;
+    grid-template-rows: auto 1fr 1fr;
+    grid-template-areas: "video" "articulo1" "articulo2";
+    display: grid;
+    row-gap: 0.9rem;
+    column-gap: 0.9rem;
+    height: 100%; }
+  .subseccionContacto {
+    width: 100%; }
+  #subseccionFormulario {
+    margin-bottom: 0.9rem; }
+  #subseccionDatosContacto {
+    margin-top: 0.9rem; }
+  /* CONTENEDOR DEL FORMULARIO */
+  .contenedorItemFormulario, .contenedorItemFormulario--checkbox {
+    margin: 0 0 0.625rem 0;
+    flex-direction: column; }
+    .contenedorItemFormulario .contenedorItemFormulario__etiqueta, .contenedorItemFormulario--checkbox .contenedorItemFormulario__etiqueta {
+      width: 100%;
+      font-size: 0.85rem; }
+    .contenedorItemFormulario .contenedorItemFormulario__input, .contenedorItemFormulario--checkbox .contenedorItemFormulario__input {
+      width: 100%; }
+  .contenedorItemFormulario--checkbox {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.625rem; }
+  /* FIN CONTENEDOR */ }
+
+@media only screen and (min-width: 992px) {
+  #seccionIndumentaria {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "seccion1 seccion2" "seccion3 seccion4" "seccion5 seccion6";
+    display: grid;
+    row-gap: 0.9rem;
+    column-gap: 0.9rem;
+    height: 100%; }
+  #seccionCalzado {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "seccion1 seccion2" "seccion3 seccion4" "seccion5 seccion6" "seccion7 seccion8";
+    display: grid;
+    row-gap: 0.9rem;
+    column-gap: 0.9rem;
+    height: 100%; }
+  #seccionSucursales {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "seccion1 seccion2" "seccion3 seccion4";
+    display: grid;
+    row-gap: 0.9rem;
+    column-gap: 0.9rem;
+    height: 100%; }
+  #seccionContacto {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch; }
+  .subseccionContacto {
+    width: 50%; }
+  #subseccionFormulario {
+    margin-right: 0.45rem;
+    margin-bottom: 0; }
+  #subseccionDatosContacto {
+    margin-left: 0.45rem;
+    margin-top: 0; }
+  .mainHome {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas: "video video" "articulo1 articulo2";
+    display: grid;
+    row-gap: 0.9rem;
+    column-gap: 0.9rem;
+    height: 100%; }
+  .contenedorItemFormulario, .contenedorItemFormulario--checkbox {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.625rem;
+    flex-direction: row; }
+    .contenedorItemFormulario .contenedorItemFormulario__etiqueta, .contenedorItemFormulario--checkbox .contenedorItemFormulario__etiqueta {
+      width: 40%;
+      font-size: 1rem; }
+    .contenedorItemFormulario .contenedorItemFormulario__input, .contenedorItemFormulario--checkbox .contenedorItemFormulario__input {
+      width: 60%; } }
+
+/* FIN MEDIA QUERIES */

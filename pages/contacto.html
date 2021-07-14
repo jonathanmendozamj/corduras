@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="../css/estilos.css" >
+        <title>Contacto</title>
+    </head>
+    <body>
+        <!-- Encabezado -->
+		<header class="encabezado">
+            <div class="container">
+                <nav class="navbar navbar-expand-xl navbar-dark bg-dark navegador"> 
+                    <div class="container-fluid" >
+                        <a class="navbar-brand" href="../index.html">
+                            <img class="navegador__logo" src="../images/logo-corduras.png" alt="Logo del local">
+                        </a>
+    
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#grupoItemNavs" aria-controls="grupoItemNavs" aria-expanded="true" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+    
+                        <ul id="grupoItemNavs" class="navbar-nav me-auto mb-2 mb-md-0 navegador__lista">
+    
+                            <li class="nav-item navegador__item">
+                                <a class="nav-link" href="sucursales.html">SUCURSALES</a>
+                            </li>
+    
+                            <li class="nav-item navegador__item">
+                                <a class="nav-link" href="calzado.html">CALZADO</a>
+                            </li>
+    
+                            <li class="nav-item navegador__item">
+                                <a class="nav-link" href="indumentaria.html">INDUMENTARIA</a>
+                            </li>
+    
+                            <li class="nav-item navegador__item">
+                                <a class="nav-link" href="contacto.html">CONTACTO</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>	
+        </header>
+
+        <main>
+            <div class="container"> 
+                <h1>CONTACTO</h1>
+                <p>Envianos tu consulta, te responderemos a la brevedad.</p>
+                
+                <!-- Sección que agrupa a las dos subsecciones -->
+                <section id="seccionContacto">
+                    <section class="articulo--principal subseccionContacto" id="subseccionFormulario" data-aos="fade-down" data-aos-duration="2000">
+                        <form>
+                            <!-- Nombre -->
+                            <div class="contenedorItemFormulario">
+                                <label class="contenedorItemFormulario__etiqueta form-label" for="input-nombre">Nombre</label>
+                                <input class="contenedorItemFormulario__input form-control"  type="text" id="input-nombre" name="input-nombre" placeholder="Nombre">
+                            </div>
+            
+                            <!-- Mail -->
+                            <div class="contenedorItemFormulario">
+                                <label class="contenedorItemFormulario__etiqueta form-label" for="input-mail">Mail</label>
+                                <input class="contenedorItemFormulario__input form-control" type="text" id="input-mail" name="input-mail" placeholder="Mail">
+                            </div>
+            
+                            <!-- Teléfono -->
+                            <div class="contenedorItemFormulario">
+                                <label class="contenedorItemFormulario__etiqueta form-label" for="input-telefono">Teléfono</label>
+                                <input class="contenedorItemFormulario__input form-control" type="text" id="input-telefono" name="input-telefono" placeholder="Teléfono">
+                            </div>
+            
+                            <!-- Opciones -->
+                            <div class="contenedorItemFormulario">
+                                <label class="contenedorItemFormulario__etiqueta form-label" for="option-provincia">Provincia</label>
+                                <select class="contenedorItemFormulario__input form-select" name="option-provincia">
+                                    <option value="Buenos Aires">Buenos Aires</option>
+                                    <option value="Buenos Aires Capital">Buenos Aires Capital</option>
+                                    <option value="Catamarca">Catamarca</option>
+                                    <option value="Chaco">Chaco</option>
+                                    <option value="Chubut">Chubut</option>
+                                    <option value="Cordoba">Cordoba</option>
+                                    <option value="Corrientes">Corrientes</option>
+                                    <option value="Entre Rios">Entre Rios</option>
+                                    <option value="Formosa">Formosa</option>
+                                    <option value="Jujuy">Jujuy</option>
+                                    <option value="La Pampa">La Pampa</option>
+                                    <option value="La Rioja">La Rioja</option>
+                                    <option value="Mendoza">Mendoza</option>
+                                    <option value="Misiones">Misiones</option>
+                                    <option value="Neuquen">Neuquen</option>
+                                    <option value="Rio Negro">Rio Negro</option>
+                                    <option value="Salta">Salta</option>
+                                    <option value="San Juan">San Juan</option>
+                                    <option value="San Luis">San Luis</option>
+                                    <option value="Santa Cruz">Santa Cruz</option>
+                                    <option value="Santa Fe">Santa Fe</option>
+                                    <option value="Santiago del Estero">Santiago del Estero</option>
+                                    <option value="Tierra del Fuego">Tierra del Fuego</option>
+                                    <option value="Tucuman">Tucuman</option>
+                                    <option value="Exterior">Exterior del país</option>
+                                </select>
+                            </div>
+            
+                            <!-- Mensaje -->
+                            <div class="contenedorItemFormulario">
+                                <label class="contenedorItemFormulario__etiqueta form-label" for="textarea-mensaje">Mensaje</label>
+                                <textarea class="contenedorItemFormulario__input form-control" name="textarea-mensaje" id="textarea-mensaje" cols="20" rows="5" placeholder="Mensaje" ></textarea>
+                            </div>
+            
+                            <!-- Checkbox de enviar promociones -->
+                            <div class="contenedorItemFormulario--checkbox">
+                                <label class="contenedorItemFormulario__etiqueta form-label" for="checkbox-enviar-info">Deseo recibir promociones</label>
+                                <input class="form-check-input" type="checkbox" name="checkbox-enviar-info" id="checkbox-enviar-info" >
+                            </div>
+            
+                            <!-- Botones -->
+                            <div class="contenedorItemFormulario">
+                                <div class="contenedorItemFormulario__etiqueta">
+                                    <!-- Boton de reseteo -->
+                                    <input class="contenedorItemFormulario__boton btn btn-danger" type="reset" name="LIMPIAR" data-bs-toggle="modal" data-bs-target="#modalReset">
+                                </div>
+                                <div class="contenedorItemFormulario__input">
+                                    <!-- Boton de enviar -->
+                                    <input class="contenedorItemFormulario__boton btn btn-danger" type="button" name="ENVIAR" value="Enviar datos" data-bs-toggle="modal" data-bs-target="#modalEnviarDatos">
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+        
+                    <section class="articulo--secundario subseccionContacto" id="subseccionDatosContacto" data-aos="fade-down" data-aos-duration="2000">
+                        <h4 class="articulo__titulo">CONTACTO - CASA CENTRAL</h4>
+                        <p class="articulo__parrafo"><img class="icono" src="../icons/telefono-black.svg" alt="Teléfono fijo"> (02254) 407325</p>
+                        <p class="articulo__parrafo"><img class="icono" src="../icons/mail-black.svg" alt="Mail"> cordurasrock@gmail.com</p>
+                        <p class="articulo__parrafo"><img class="icono" src="../icons/position-black.svg" alt="Dirección"> Av. Víctor Hugo 1341 (Local 5) - Ostende</p>
+                    </section>
+
+                    <!-- INICIO MODAL RESET -->
+                    <div class="modal fade" id="modalReset" tabindex="-1" aria-labelledby="labeltTituloReset" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="labeltTituloReset">Corduras</h5>
+                                </div>
+
+                                <div class="modal-body">
+                                    Datos del formulario borrados!
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FIN MODAL RESET -->
+
+                    <!-- INICIO MODAL ENVIAR DATOS -->
+                    <div class="modal fade" id="modalEnviarDatos" tabindex="-1" aria-labelledby="labelTituloEnviarDatos" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="labelTituloEnviarDatos">Corduras</h5>
+                                </div>
+
+                                <div class="modal-body">
+                                    Datos de contacto enviados. Nos contactaremos con vos pronto!
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FIN MODAL ENVIAR DATOS -->
+                </section>
+
+                <article class="articulo--principal" id="articuloAccordion" data-aos="fade-down" data-aos-duration="2000">
+                    <h4 class="articulo__titulo">PREGUNTAS FRECUENTES</h4>
+                    <div class="accordion accordion-flush" id="accordionPreguntasFrecuentes">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="encabezadoUno">
+                                <button class="accordion-button collapsed encabezadoAccordion" type="button" data-bs-toggle="collapse" data-bs-target="#flushCollapseUno" aria-expanded="false" aria-controls="flushCollapseUno">
+                                    ¿Qué formas de pago puedo aprovechar para realizar mi compra?
+                                </button>
+                            </h2>
+                            <div id="flushCollapseUno" class="accordion-collapse collapse" aria-labelledby="encabezadoUno" data-bs-parent="#accordionPreguntasFrecuentes">
+                            <div class="accordion-body">Aceptamos todas las tarjetas a través de Mercado Pago.</div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="encabezadoDos">
+                                <button class="accordion-button collapsed encabezadoAccordion" type="button" data-bs-toggle="collapse" data-bs-target="#flushCollapseDos" aria-expanded="false" aria-controls="flushCollapseDos">
+                                    ¿Cuál es el costo de envío?
+                                </button>
+                            </h2>
+                            <div id="flushCollapseDos" class="accordion-collapse collapse" aria-labelledby="encabezadoDos" data-bs-parent="#accordionPreguntasFrecuentes">
+                                <div class="accordion-body">Por el momento solo estamos operando con envios dentro del Partido de Pinamar de manera gratuita.</div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="preguntaTres">
+                                <button class="accordion-button collapsed encabezadoAccordion" type="button" data-bs-toggle="collapse" data-bs-target="#flushCollapseTres" aria-expanded="false" aria-controls="flushCollapseTres">
+                                    ¿Cómo se realizan los envíos?
+                                </button>
+                            </h2>
+                            <div id="flushCollapseTres" class="accordion-collapse collapse" aria-labelledby="preguntaTres" data-bs-parent="#accordionPreguntasFrecuentes">
+                                <div class="accordion-body">Trabajamos con delivery en camioneta.</div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="encabezadoCuatro">
+                                <button class="accordion-button collapsed encabezadoAccordion" type="button" data-bs-toggle="collapse" data-bs-target="#flushCollapseCuatro" aria-expanded="false" aria-controls="flushCollapseCuatro">
+                                    ¿Cuál es el plazo para realizar un cambio?
+                                </button>
+                            </h2>
+                            <div id="flushCollapseCuatro" class="accordion-collapse collapse" aria-labelledby="encabezadoCuatro" data-bs-parent="#accordionPreguntasFrecuentes">
+                                <div class="accordion-body">Podés solicitar un cambio hasta 5 (cinco) días hábiles luego de realizada la compra.</div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="encabezadoCinco">
+                                <button class="accordion-button collapsed encabezadoAccordion" type="button" data-bs-toggle="collapse" data-bs-target="#flushCollapseCinco" aria-expanded="false" aria-controls="flushCollapseCinco">
+                                    ¿Qué tengo que hacer si el producto no llega en buen estado?
+                                </button>
+                            </h2>
+                            <div id="flushCollapseCinco" class="accordion-collapse collapse" aria-labelledby="encabezadoCinco" data-bs-parent="#accordionPreguntasFrecuentes">
+                                <div class="accordion-body">Por favor, ponete en contacto a nuestro mail cordurasrock@gmail.com</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </article>
+            </div>
+        </main>
+        
+		<footer class="piePagina">
+            <div class="container">
+                <div class="contenedorSeccionesPiePagina">
+                    <section class="seccionPiePagina">
+                        <h4 class="seccionPiePagina__titulo">SEGUINOS EN NUESTRAS REDES</h4>
+                        <div>
+                            <a href="#"><img class="seccionPiePagina__iconos" src="../images/facebook.png" alt="Facebook"></a> 
+                            <a href="#"><img class="seccionPiePagina__iconos" src="../images/instagram.svg" alt="Instagram"></a>
+                        </div>
+                    </section>
+        
+                    <section class="seccionPiePagina">
+                        <h4 class="seccionPiePagina__titulo">CONTACTO - CASA CENTRAL</h4>
+                        <p class="seccionPiePagina__parrafo"><img class="icono" src="../icons/telefono.svg" alt="Teléfono fijo"> (02254) 407325</p>
+                        <p class="seccionPiePagina__parrafo"><img class="icono" src="../icons/mail.svg" alt="Mail"> cordurasrock@gmail.com</p>
+                        <p class="seccionPiePagina__parrafo"><img class="icono" src="../icons/position.svg" alt="Dirección"> Av. Víctor Hugo 1341 (Local 5) - Ostende</p>
+                    </section>
+                </div>
+                
+                <section class="seccionPiePagina">
+                    <p class="seccionPiePagina__parrafo--centrado">Copyright CORDURAS - 2021</p>
+                </section>
+            </div>
+		</footer>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>
+			AOS.init();
+		</script>
+    </body>
+</html>
