@@ -1,0 +1,3 @@
+SUponete que para el sitio se tiene q hacer un modulo que sea no se, la parte de editar el perfil
+Entonces eso se puede desarrollar en una rama aparte y luego mergear con la rama de desarrollo
+Nada, no se hagan lio igual, de momento van a laburar dos ramas como mucho :P

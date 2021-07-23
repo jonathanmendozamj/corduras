@@ -4,6 +4,9 @@ $paddingSecciones: 0.9rem;
 $radioEsquinas: 2rem;
 $paddingInterno: 1.1rem;
 
+$escalaHover: 1.04;
+$transicionHover: 1.2s;
+
 $colorBase: black;
 $colorFondoBase: white;
 $colorFondoSecundario: #F5F6F6;
@@ -27,6 +30,8 @@ $cantidadMaximaSecciones: 8;
     column-gap: $paddingSecciones;
     height: 100%;
 }
+
+
 
 @mixin recuadros(){
     border-radius: $radioEsquinas;
@@ -60,7 +65,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Encabezado y elementos del mismo */
-.encabezado{
+header{
     position: sticky;
     top: 0;
     background-color: $colorBase;
@@ -74,16 +79,16 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     background-color: $colorBase !important;
 
-    .navegador__lista{
+    &__lista{
         justify-content: space-between;
     }
 
-    .navegador__logo{
+    &__logo{
         width: 3.5rem;
         height: 3.5rem;
     }
     
-    .navegador__item{
+    &__item{
         /*text-align: center;
         display: inline-block;*/
         font-size: 1.125rem;
@@ -93,7 +98,7 @@ h1, h2, h3, h4, h5, h6 {
 /* FIN NAVS, LISTA E ITEMS */
 
 /* Pie de página y elementos del mismo */
-.piePagina{
+footer{
     background-color: $colorBase;
     padding: $paddingGeneral;
     position: relative;
@@ -110,32 +115,34 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .seccionPiePagina{
-    margin: 0.5rem 0 0.5rem 0
+    margin: 0.5rem 0 0.5rem 0;
+
+    &__titulo{
+        color: $colorFondoBase;
+        text-align: left;
+        font-size: 0.9rem;
+        font-weight: bold;
+    }
+    
+    &__parrafo{
+        color: $colorFondoBase;
+        font-size: 0.875rem;
+        margin-bottom: 0;
+    }
+    
+    &__parrafo--centrado{
+        color: $colorFondoBase;
+        font-size: 0.875rem;
+        text-align: center;
+    }
+    
+    &__iconos{
+        width: 2rem;
+        height: 2rem;
+    }
 }
 
-.seccionPiePagina__titulo{
-    color: $colorFondoBase;
-    text-align: left;
-    font-size: 0.9rem;
-    font-weight: bold;
-}
 
-.seccionPiePagina__parrafo{
-    color: $colorFondoBase;
-    font-size: 0.875rem;
-    margin-bottom: 0;
-}
-
-.seccionPiePagina__parrafo--centrado{
-    color: $colorFondoBase;
-    font-size: 0.875rem;
-    text-align: center;
-}
-
-.seccionPiePagina__iconos{
-    width: 2rem;
-    height: 2rem;
-}
 /* FIN PIE PAGINA */
 
 /* SECCION PRINCIPAL */
@@ -154,23 +161,33 @@ main{
 
 .seccionImagen{
     background-color: $colorFondoPrincipal;
-    border-radius: $radioEsquinas;
-    padding: 1.1rem;
+    @include recuadros();
 
-    .seccionImagen__imagen{
+    &__imagen{
+        @include recuadros();
+        padding: 0;
         width: 100%;
         height: auto;
+
+        &:hover{
+            transform: scale($escalaHover, $escalaHover);
+            opacity: 1;
+            transition: $transicionHover;
+        }
     }
-    
-    .seccionImagen__titulo{
+
+    &__titulo{
         color: $colorPrincipal;
         margin: 0;
+        padding-top: $paddingInterno;
+        padding-bottom: $paddingInterno/3;
         text-align: left;
         font-weight: bolder;
     }
     
-    .seccionImagen__parrafo{
+    &__parrafo{
         color: $colorBase;
+        margin: 0;
     }
 }
 /* FIN GRILLA Y SECCIÓN DE IMÁGENES */
@@ -184,11 +201,13 @@ main{
     z-index: 2;
     right: 1.875rem;
     bottom: 1.875rem;
+
+    &__imagen{
+        @include dimensiones(3rem, 3rem);
+    }
 }
 
-.seccionIconoFlotante__imagen{
-    @include dimensiones(3rem, 3rem);
-}
+
 /* FIN SECCIÓN ÍCONO FLOTANTE*/
 
 .icono{
@@ -197,20 +216,19 @@ main{
 
 /* ARTÍCULOS */
 .articulo{
-    border-radius: $radioEsquinas;
-    padding: 1.1rem;
+    @include recuadros();
 
-    .articulo__titulo{
+    &__titulo{
         color: $colorBase;
         font-weight: bold;
     }
 
-    .articulo__parrafo{
+    &__parrafo{
         color: $colorBase;
         font-size: large;
     }
 
-    .articulo__parrafo--acotacion{
+    &__parrafo--acotacion{
         color: $colorBase;
         font-size: small;
     }
@@ -261,23 +279,25 @@ main{
 .contenedorItemFormulario{
     @include mixinContenedorItemFormulario();
     
-    .contenedorItemFormulario__etiqueta{
+    &__etiqueta{
         width: 40%;
         font-size: 1rem;
     }
 
-    .contenedorItemFormulario__input{
+    &__input{
         width: 60%;
     }
 
-    .contenedorItemFormulario__boton{
+    &__boton{
         width: 100%;
         @include secciones($colorPrincipal, $colorFondoBase); 
+
+        &:hover{
+            @include secciones($colorFondoBase, $colorPrincipal);
+        }
     }
     
-    .contenedorItemFormulario__boton:hover{
-        @include secciones($colorFondoBase, $colorPrincipal);
-    }
+    
 
 }
 
@@ -387,12 +407,12 @@ main{
     .contenedorItemFormulario{
         flex-direction: column;
 
-        .contenedorItemFormulario__etiqueta{
+        &__etiqueta{
             width: 100%;
             font-size: 0.8rem;
         }
     
-        .contenedorItemFormulario__input{
+        &__input{
             width: 100%;
         }
     }
@@ -469,12 +489,12 @@ main{
         margin: 0 0 0.625rem 0;
         flex-direction: column;
     
-        .contenedorItemFormulario__etiqueta{
+        &__etiqueta{
             width: 100%;
             font-size: 0.85rem;
         }
     
-        .contenedorItemFormulario__input{
+        &__input{
             width: 100%;
         }
     }
@@ -551,12 +571,12 @@ main{
         @include mixinContenedorItemFormulario();
         flex-direction: row;
     
-        .contenedorItemFormulario__etiqueta{
+        &__etiqueta{
             width: 40%;
             font-size: 1rem;
         }
     
-        .contenedorItemFormulario__input{
+        &__input{
             width: 60%;
         }
     }

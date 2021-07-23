@@ -19,7 +19,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold; }
 
 /* Encabezado y elementos del mismo */
-.encabezado {
+header {
   position: sticky;
   top: 0;
   background-color: black;
@@ -31,12 +31,12 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
   width: 100%;
   background-color: black !important; }
-  .navegador .navegador__lista {
+  .navegador__lista {
     justify-content: space-between; }
-  .navegador .navegador__logo {
+  .navegador__logo {
     width: 3.5rem;
     height: 3.5rem; }
-  .navegador .navegador__item {
+  .navegador__item {
     /*text-align: center;
         display: inline-block;*/
     font-size: 1.125rem;
@@ -44,7 +44,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* FIN NAVS, LISTA E ITEMS */
 /* Pie de página y elementos del mismo */
-.piePagina {
+footer {
   background-color: black;
   padding: 1.56rem;
   position: relative;
@@ -60,26 +60,22 @@ h1, h2, h3, h4, h5, h6 {
 
 .seccionPiePagina {
   margin: 0.5rem 0 0.5rem 0; }
-
-.seccionPiePagina__titulo {
-  color: white;
-  text-align: left;
-  font-size: 0.9rem;
-  font-weight: bold; }
-
-.seccionPiePagina__parrafo {
-  color: white;
-  font-size: 0.875rem;
-  margin-bottom: 0; }
-
-.seccionPiePagina__parrafo--centrado {
-  color: white;
-  font-size: 0.875rem;
-  text-align: center; }
-
-.seccionPiePagina__iconos {
-  width: 2rem;
-  height: 2rem; }
+  .seccionPiePagina__titulo {
+    color: white;
+    text-align: left;
+    font-size: 0.9rem;
+    font-weight: bold; }
+  .seccionPiePagina__parrafo {
+    color: white;
+    font-size: 0.875rem;
+    margin-bottom: 0; }
+  .seccionPiePagina__parrafo--centrado {
+    color: white;
+    font-size: 0.875rem;
+    text-align: center; }
+  .seccionPiePagina__iconos {
+    width: 2rem;
+    height: 2rem; }
 
 /* FIN PIE PAGINA */
 /* SECCION PRINCIPAL */
@@ -98,16 +94,26 @@ main {
   background-color: #FFE5E5;
   border-radius: 2rem;
   padding: 1.1rem; }
-  .seccionImagen .seccionImagen__imagen {
+  .seccionImagen__imagen {
+    border-radius: 2rem;
+    padding: 1.1rem;
+    padding: 0;
     width: 100%;
     height: auto; }
-  .seccionImagen .seccionImagen__titulo {
+    .seccionImagen__imagen:hover {
+      transform: scale(1.04, 1.04);
+      opacity: 1;
+      transition: 1.2s; }
+  .seccionImagen__titulo {
     color: #AE3335;
     margin: 0;
+    padding-top: 1.1rem;
+    padding-bottom: 0.36667rem;
     text-align: left;
     font-weight: bolder; }
-  .seccionImagen .seccionImagen__parrafo {
-    color: black; }
+  .seccionImagen__parrafo {
+    color: black;
+    margin: 0; }
 
 /* FIN GRILLA Y SECCIÓN DE IMÁGENES */
 /* SECCIÓN ÍCONO FLOTANTE */
@@ -119,10 +125,9 @@ main {
   z-index: 2;
   right: 1.875rem;
   bottom: 1.875rem; }
-
-.seccionIconoFlotante__imagen {
-  height: 3rem;
-  width: 3rem; }
+  .seccionIconoFlotante__imagen {
+    height: 3rem;
+    width: 3rem; }
 
 /* FIN SECCIÓN ÍCONO FLOTANTE*/
 .icono {
@@ -133,13 +138,13 @@ main {
 .articulo, .articulo--principal, .articulo--secundario {
   border-radius: 2rem;
   padding: 1.1rem; }
-  .articulo .articulo__titulo, .articulo--principal .articulo__titulo, .articulo--secundario .articulo__titulo {
+  .articulo__titulo {
     color: black;
     font-weight: bold; }
-  .articulo .articulo__parrafo, .articulo--principal .articulo__parrafo, .articulo--secundario .articulo__parrafo {
+  .articulo__parrafo {
     color: black;
     font-size: large; }
-  .articulo .articulo__parrafo--acotacion, .articulo--principal .articulo__parrafo--acotacion, .articulo--secundario .articulo__parrafo--acotacion {
+  .articulo__parrafo--acotacion {
     color: black;
     font-size: small; }
 
@@ -176,18 +181,18 @@ main {
   display: flex;
   flex-direction: row;
   margin-bottom: 0.625rem; }
-  .contenedorItemFormulario .contenedorItemFormulario__etiqueta, .contenedorItemFormulario--checkbox .contenedorItemFormulario__etiqueta {
+  .contenedorItemFormulario__etiqueta {
     width: 40%;
     font-size: 1rem; }
-  .contenedorItemFormulario .contenedorItemFormulario__input, .contenedorItemFormulario--checkbox .contenedorItemFormulario__input {
+  .contenedorItemFormulario__input {
     width: 60%; }
-  .contenedorItemFormulario .contenedorItemFormulario__boton, .contenedorItemFormulario--checkbox .contenedorItemFormulario__boton {
+  .contenedorItemFormulario__boton {
     width: 100%;
     background-color: #AE3335;
     color: white; }
-  .contenedorItemFormulario .contenedorItemFormulario__boton:hover, .contenedorItemFormulario--checkbox .contenedorItemFormulario__boton:hover {
-    background-color: white;
-    color: #AE3335; }
+    .contenedorItemFormulario__boton:hover {
+      background-color: white;
+      color: #AE3335; }
 
 .contenedorItemFormulario--checkbox {
   justify-content: space-between; }
@@ -280,10 +285,10 @@ main {
   /* CONTENEDOR DEL FORMULARIO */
   .contenedorItemFormulario, .contenedorItemFormulario--checkbox {
     flex-direction: column; }
-    .contenedorItemFormulario .contenedorItemFormulario__etiqueta, .contenedorItemFormulario--checkbox .contenedorItemFormulario__etiqueta {
+    .contenedorItemFormulario__etiqueta {
       width: 100%;
       font-size: 0.8rem; }
-    .contenedorItemFormulario .contenedorItemFormulario__input, .contenedorItemFormulario--checkbox .contenedorItemFormulario__input {
+    .contenedorItemFormulario__input {
       width: 100%; }
   .contenedorItemFormulario--checkbox {
     display: flex;
@@ -335,10 +340,10 @@ main {
   .contenedorItemFormulario, .contenedorItemFormulario--checkbox {
     margin: 0 0 0.625rem 0;
     flex-direction: column; }
-    .contenedorItemFormulario .contenedorItemFormulario__etiqueta, .contenedorItemFormulario--checkbox .contenedorItemFormulario__etiqueta {
+    .contenedorItemFormulario__etiqueta {
       width: 100%;
       font-size: 0.85rem; }
-    .contenedorItemFormulario .contenedorItemFormulario__input, .contenedorItemFormulario--checkbox .contenedorItemFormulario__input {
+    .contenedorItemFormulario__input {
       width: 100%; }
   .contenedorItemFormulario--checkbox {
     display: flex;
@@ -397,10 +402,10 @@ main {
     flex-direction: row;
     margin-bottom: 0.625rem;
     flex-direction: row; }
-    .contenedorItemFormulario .contenedorItemFormulario__etiqueta, .contenedorItemFormulario--checkbox .contenedorItemFormulario__etiqueta {
+    .contenedorItemFormulario__etiqueta {
       width: 40%;
       font-size: 1rem; }
-    .contenedorItemFormulario .contenedorItemFormulario__input, .contenedorItemFormulario--checkbox .contenedorItemFormulario__input {
+    .contenedorItemFormulario__input {
       width: 60%; } }
 
 /* FIN MEDIA QUERIES */
