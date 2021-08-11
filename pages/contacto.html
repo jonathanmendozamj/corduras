@@ -7,10 +7,8 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-
         <link rel="stylesheet" href="../css/estilos.css" >
+        <link rel="shortcut icon" href="../favicon.ico"/>
 
         <meta name="description" content="En esta parte podés mandarnos un mensaje para contactarnos. Además podes ver algunas de las preguntas frecuentes que puedan surgir.">
         <meta name="keywords" content="tienda de ropa, contacto, mail, teléfono, dirección">
@@ -21,7 +19,7 @@
         <!-- Encabezado -->
 		<header>
             <div class="container">
-                <nav class="navbar navbar-expand-xl navbar-dark bg-dark navegador"> 
+                <nav class="navbar navbar-expand-md navbar-dark bg-dark navegador"> 
                     <div class="container-fluid" >
                         <a class="navbar-brand" href="../index.html">
                             <img class="navegador__logo" src="../images/logo-corduras.png" alt="Logo del local">
@@ -30,32 +28,35 @@
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#grupoItemNavs" aria-controls="grupoItemNavs" aria-expanded="true" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
+                        
+                        <div id="grupoItemNavs" class="collapse navbar-collapse" >
+                            <ul class="navbar-nav me-auto mb-2 mb-md-0 navegador__lista">
     
-                        <ul id="grupoItemNavs" class="navbar-nav me-auto mb-2 mb-md-0 navegador__lista">
-    
-                            <li class="nav-item navegador__item">
-                                <a class="nav-link" href="sucursales.html">SUCURSALES</a>
-                            </li>
-    
-                            <li class="nav-item navegador__item">
-                                <a class="nav-link" href="calzado.html">CALZADO</a>
-                            </li>
-    
-                            <li class="nav-item navegador__item">
-                                <a class="nav-link" href="indumentaria.html">INDUMENTARIA</a>
-                            </li>
-    
-                            <li class="nav-item navegador__item">
-                                <a class="nav-link" href="contacto.html">CONTACTO</a>
-                            </li>
-                        </ul>
+                                <li class="nav-item navegador__item">
+                                    <a class="nav-link" href="sucursales.html">SUCURSALES</a>
+                                </li>
+        
+                                <li class="nav-item navegador__item">
+                                    <a class="nav-link" href="calzado.html">CALZADO</a>
+                                </li>
+        
+                                <li class="nav-item navegador__item">
+                                    <a class="nav-link" href="indumentaria.html">INDUMENTARIA</a>
+                                </li>
+        
+                                <li class="nav-item navegador__item">
+                                    <a class="nav-link" href="contacto.html">CONTACTO</a>
+                                </li>
+                            </ul>
+                        </div>
+                        
                     </div>
                 </nav>
             </div>	
         </header>
 
         <main>
-            <div class="container"> 
+            <div class="container contenedor-principal"> 
                 <h1>CONTACTO</h1>
                 <p>Envianos tu consulta, te responderemos a la brevedad.</p>
                 
@@ -64,42 +65,42 @@
                     <section class="articulo--principal subseccionContacto" id="subseccionFormulario" data-aos="fade-down" data-aos-duration="2000">
                         <form>
                             <!-- Nombre -->
-                            <div class="contenedorItemFormulario">
-                                <label class="contenedorItemFormulario__etiqueta form-label" for="input-nombre">Nombre</label>
-                                <input class="contenedorItemFormulario__input form-control"  type="text" id="input-nombre" name="input-nombre" placeholder="Nombre">
+                            <div class="contenedor-item-formulario">
+                                <label class="contenedor-item-formulario__etiqueta form-label" for="input-nombre">Nombre</label>
+                                <input class="contenedor-item-formulario__input form-control"  type="text" id="input-nombre" name="input-nombre" placeholder="Nombre">
                             </div>
             
                             <!-- Mail -->
-                            <div class="contenedorItemFormulario">
-                                <label class="contenedorItemFormulario__etiqueta form-label" for="input-mail">Mail</label>
-                                <input class="contenedorItemFormulario__input form-control" type="text" id="input-mail" name="input-mail" placeholder="Mail">
+                            <div class="contenedor-item-formulario">
+                                <label class="contenedor-item-formulario__etiqueta form-label" for="input-mail">Mail</label>
+                                <input class="contenedor-item-formulario__input form-control" type="text" id="input-mail" name="input-mail" placeholder="Mail">
                             </div>
             
                             <!-- Teléfono -->
-                            <div class="contenedorItemFormulario">
-                                <label class="contenedorItemFormulario__etiqueta form-label" for="input-telefono">Teléfono</label>
-                                <input class="contenedorItemFormulario__input form-control" type="number" id="input-telefono" name="input-telefono" placeholder="Teléfono">
+                            <div class="contenedor-item-formulario">
+                                <label class="contenedor-item-formulario__etiqueta form-label" for="input-telefono">Teléfono</label>
+                                <input class="contenedor-item-formulario__input form-control" type="number" id="input-telefono" name="input-telefono" placeholder="Teléfono">
                             </div>
             
                             <!-- Opciones -->
-                            <div class="contenedorItemFormulario">
-                                <label class="contenedorItemFormulario__etiqueta form-label" for="option-provincia">Provincia</label>
-                                <select class="contenedorItemFormulario__input form-select" name="option-provincia">
+                            <div class="contenedor-item-formulario">
+                                <label class="contenedor-item-formulario__etiqueta form-label" for="option-provincia">Provincia</label>
+                                <select class="contenedor-item-formulario__input form-select" name="option-provincia">
                                     <option value="Buenos Aires">Buenos Aires</option>
                                     <option value="Buenos Aires Capital">Buenos Aires Capital</option>
                                     <option value="Catamarca">Catamarca</option>
                                     <option value="Chaco">Chaco</option>
                                     <option value="Chubut">Chubut</option>
-                                    <option value="Cordoba">Cordoba</option>
+                                    <option value="Cordoba">Córdoba</option>
                                     <option value="Corrientes">Corrientes</option>
-                                    <option value="Entre Rios">Entre Rios</option>
+                                    <option value="Entre Rios">Entre Ríos</option>
                                     <option value="Formosa">Formosa</option>
                                     <option value="Jujuy">Jujuy</option>
                                     <option value="La Pampa">La Pampa</option>
                                     <option value="La Rioja">La Rioja</option>
                                     <option value="Mendoza">Mendoza</option>
                                     <option value="Misiones">Misiones</option>
-                                    <option value="Neuquen">Neuquen</option>
+                                    <option value="Neuquen">Neuquén</option>
                                     <option value="Rio Negro">Rio Negro</option>
                                     <option value="Salta">Salta</option>
                                     <option value="San Juan">San Juan</option>
@@ -108,42 +109,39 @@
                                     <option value="Santa Fe">Santa Fe</option>
                                     <option value="Santiago del Estero">Santiago del Estero</option>
                                     <option value="Tierra del Fuego">Tierra del Fuego</option>
-                                    <option value="Tucuman">Tucuman</option>
+                                    <option value="Tucuman">Tucumán</option>
                                     <option value="Exterior">Exterior del país</option>
                                 </select>
                             </div>
             
                             <!-- Mensaje -->
-                            <div class="contenedorItemFormulario">
-                                <label class="contenedorItemFormulario__etiqueta form-label" for="textarea-mensaje">Mensaje</label>
-                                <textarea class="contenedorItemFormulario__input form-control" name="textarea-mensaje" id="textarea-mensaje" cols="20" rows="5" placeholder="Mensaje" ></textarea>
+                            <div class="contenedor-item-formulario">
+                                <label class="contenedor-item-formulario__etiqueta form-label" for="textarea-mensaje">Mensaje</label>
+                                <textarea class="contenedor-item-formulario__input form-control" name="textarea-mensaje" id="textarea-mensaje" cols="20" rows="5" placeholder="Mensaje" ></textarea>
                             </div>
             
                             <!-- Checkbox de enviar promociones -->
-                            <div class="contenedorItemFormulario--checkbox">
-                                <label class="contenedorItemFormulario__etiqueta form-label" for="checkbox-enviar-info">Deseo recibir promociones</label>
+                            <div class="contenedor-item-formulario--checkbox">
+                                <label class="contenedor-item-formulario__etiqueta form-label" for="checkbox-enviar-info">Deseo recibir promociones</label>
                                 <input class="form-check-input" type="checkbox" name="checkbox-enviar-info" id="checkbox-enviar-info" >
                             </div>
             
                             <!-- Botones -->
-                            <div class="contenedorItemFormulario">
-                                <div class="contenedorItemFormulario__etiqueta">
+                            <div class="contenedor-item-formulario">
+                                <div class="contenedor-item-formulario__etiqueta">
                                     <!-- Boton de reseteo -->
-                                    <input class="contenedorItemFormulario__boton btn btn-danger" type="reset" name="LIMPIAR" data-bs-toggle="modal" data-bs-target="#modalReset">
+                                    <input class="contenedor-item-formulario__boton btn btn-danger" type="reset" name="LIMPIAR" data-bs-toggle="modal" data-bs-target="#modalReset">
                                 </div>
-                                <div class="contenedorItemFormulario__input">
+                                <div class="contenedor-item-formulario__input">
                                     <!-- Boton de enviar -->
-                                    <input class="contenedorItemFormulario__boton btn btn-danger" type="button" name="ENVIAR" value="Enviar datos" data-bs-toggle="modal" data-bs-target="#modalEnviarDatos">
+                                    <input class="contenedor-item-formulario__boton btn btn-danger" type="button" name="ENVIAR" value="Enviar datos" data-bs-toggle="modal" data-bs-target="#modalEnviarDatos">
                                 </div>
                             </div>
                         </form>
                     </section>
         
                     <section class="articulo--secundario subseccionContacto" id="subseccionDatosContacto" data-aos="fade-down" data-aos-duration="2000">
-                        <h4 class="articulo__titulo">CONTACTO - CASA CENTRAL</h4>
-                        <p class="articulo__parrafo"><img class="icono" src="../icons/telefono-black.svg" alt="Teléfono fijo"> (02254) 407427</p>
-                        <p class="articulo__parrafo"><img class="icono" src="../icons/mail-black.svg" alt="Mail"> cordurasrock@gmail.com</p>
-                        <p class="articulo__parrafo"><img class="icono" src="../icons/position-black.svg" alt="Dirección"> Av. Víctor Hugo 1341 (Local 5) - Ostende</p>
+                        <iframe id="mapaUbicacion" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3180.957093439002!2d-56.89080708492262!3d-37.12993580299499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959c9d60640e2129%3A0xb43de8575e51366e!2sCorduras%20Est.%202012!5e0!3m2!1ses-419!2sar!4v1628476384442!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy"></iframe>
                     </section>
 
                     <!-- INICIO MODAL RESET -->
@@ -187,8 +185,8 @@
                     <!-- FIN MODAL ENVIAR DATOS -->
                 </section>
 
-                <article class="articulo--principal" id="articuloAccordion" data-aos="fade-down" data-aos-duration="2000">
-                    <h4 class="articulo__titulo">PREGUNTAS FRECUENTES</h4>
+                <article class="articulo articulo--principal" id="articuloAccordion" data-aos="fade-down" data-aos-duration="2000">
+                    <h4 class="articulo--principal__titulo">PREGUNTAS FRECUENTES</h4>
                     <div class="accordion accordion-flush" id="accordionPreguntasFrecuentes">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="encabezadoUno">
@@ -252,25 +250,25 @@
         
 		<footer>
             <div class="container">
-                <div class="contenedorSeccionesPiePagina">
-                    <section class="seccionPiePagina">
-                        <h4 class="seccionPiePagina__titulo">SEGUINOS EN NUESTRAS REDES</h4>
+                <div class="contenedor-secciones-pie-pagina">
+                    <section class="seccion-pie-pagina">
+                        <h4 class="seccion-pie-pagina__titulo">SEGUINOS EN NUESTRAS REDES</h4>
                         <div>
-                            <a href="https://www.facebook.com/corduras.pinamar"><img class="seccionPiePagina__iconos" src="../images/facebook.png" alt="Facebook"></a> 
-                            <a href="https://www.instagram.com/corduras.pinamar"><img class="seccionPiePagina__iconos" src="../images/instagram.svg" alt="Instagram"></a>
+                            <a href="https://www.facebook.com/corduras.pinamar"><img class="seccion-pie-pagina__iconos" src="../images/facebook.png" alt="Facebook"></a> 
+                            <a href="https://www.instagram.com/corduras.pinamar"><img class="seccion-pie-pagina__iconos" src="../images/instagram.svg" alt="Instagram"></a>
                         </div>
                     </section>
         
-                    <section class="seccionPiePagina">
-                        <h4 class="seccionPiePagina__titulo">CONTACTO - CASA CENTRAL</h4>
-                        <p class="seccionPiePagina__parrafo"><img class="icono" src="../icons/telefono.svg" alt="Teléfono fijo"> (02254) 407427</p>
-                        <p class="seccionPiePagina__parrafo"><img class="icono" src="../icons/mail.svg" alt="Mail"> cordurasrock@gmail.com</p>
-                        <p class="seccionPiePagina__parrafo"><img class="icono" src="../icons/position.svg" alt="Dirección"> Av. Víctor Hugo 1341 (Local 5) - Ostende</p>
+                    <section class="seccion-pie-pagina">
+                        <h4 class="seccion-pie-pagina__titulo">CONTACTO - CASA CENTRAL</h4>
+                        <p class="seccion-pie-pagina__parrafo"><img class="icono" src="../icons/telefono.svg" alt="Teléfono fijo"> (02254) 407427</p>
+                        <p class="seccion-pie-pagina__parrafo"><img class="icono" src="../icons/mail.svg" alt="Mail"> cordurasrock@gmail.com</p>
+                        <p class="seccion-pie-pagina__parrafo"><img class="icono" src="../icons/position.svg" alt="Dirección"> Av. Víctor Hugo 1341 (Local 5) - Ostende</p>
                     </section>
                 </div>
                 
-                <section class="seccionPiePagina">
-                    <p class="seccionPiePagina__parrafo--centrado">Copyright CORDURAS - 2021</p>
+                <section class="seccion-pie-pagina">
+                    <p class="seccion-pie-pagina__parrafo--centrado">Copyright CORDURAS - 2021</p>
                 </section>
             </div>
 		</footer>
