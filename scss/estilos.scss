@@ -1,46 +1,14 @@
-$paddingGeneral: 1.56rem;
-$paddingSecciones: 0.9rem;
-
-$radioEsquinas: 2rem;
-$paddingInterno: 1.1rem;
-
-$escalaHover: 1.04;
-$transicionHover: 1.2s;
-
-$colorBase: black;
-$colorFondoBase: white;
-$colorFondoSecundario: #F5F6F6;
-
-$colorPrincipal: #AE3335;
-$colorFondoPrincipal: #FFE5E5;
-
-$colorWhatsapp: #25d366;
-
-$cantidadMaximaSecciones: 8;
-
-/* MIXINS */
-@mixin secciones($colorFondo, $colorTexto){
-    background-color: $colorFondo;
-    color: $colorTexto;
-}
-
-@mixin seccionesGrilla(){
-    display: grid;
-    row-gap: $paddingSecciones;
-    column-gap: $paddingSecciones;
-    height: 100%;
-}
-
-@mixin recuadros(){
-    border-radius: $radioEsquinas;
-    padding: 1.1rem;
-}
-
-@mixin dimensiones($ancho, $alto){
-    height: $alto;
-    width: $ancho;
-}
-/* FIN MIXINS*/
+@import "colores";
+@import "variables";
+@import "tipografia";
+@import "mixins";
+@import "index";
+@import "articulo";
+@import "header";
+@import "piepagina";
+@import "contacto";
+@import "grilla";
+>>>>>>> ramaEntregaFinal
 
 /* CSS Reset */
 *{
@@ -52,7 +20,7 @@ $cantidadMaximaSecciones: 8;
 body{
     width: 100vw;
     max-width: 100%;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 /* Estilo de los titulos */
@@ -62,272 +30,9 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
 }
 
-/* Encabezado y elementos del mismo */
-header{
-    position: sticky;
-    top: 0;
-    background-color: $colorBase;
-    padding: $paddingGeneral;
-    z-index: 2;
-}
-
-/* NAV, LISTA E ITEMS */
-.navegador{
-    display: inline-block;
-    width: 100%;
-    background-color: $colorBase !important;
-
-    &__lista{
-        justify-content: space-between;
-    }
-
-    &__logo{
-        width: 3.5rem;
-        height: 3.5rem;
-    }
-    
-    &__item{
-        /*text-align: center;
-        display: inline-block;*/
-        font-size: 1.125rem;
-        /*flex-grow: 2;*/
-    }
-}
-/* FIN NAVS, LISTA E ITEMS */
-
-/* Pie de página y elementos del mismo */
-footer{
-    background-color: $colorBase;
-    padding: $paddingGeneral;
-    position: relative;
-    bottom: 0;
-    left: 0;
-    height: 10%;
-}
-
-.contenedorSeccionesPiePagina{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: start;
-}
-
-.seccionPiePagina{
-    margin: 0.5rem 0 0.5rem 0;
-
-    &__titulo{
-        color: $colorFondoBase;
-        text-align: left;
-        font-size: 0.9rem;
-        font-weight: bold;
-    }
-    
-    &__parrafo{
-        color: $colorFondoBase;
-        font-size: 0.875rem;
-        margin-bottom: 0;
-    }
-    
-    &__parrafo--centrado{
-        color: $colorFondoBase;
-        font-size: 0.875rem;
-        text-align: center;
-    }
-    
-    &__iconos{
-        width: 2rem;
-        height: 2rem;
-    }
-}
-
-
-/* FIN PIE PAGINA */
-
-/* SECCION PRINCIPAL */
-main{
-    padding: $paddingGeneral;
-    background-color: $colorFondoBase;
-    min-height: 400px;
-}
-/* FIN PRINCIPAL */
-
-/* GRILLA Y SECCIÓN DE IMÁGENES */
-.grillaImagenes{
-    padding: 0.1rem;
-    display: grid;
-}
-
-.seccionImagen{
-    background-color: $colorFondoPrincipal;
-    @include recuadros();
-
-    &__imagen{
-        @include recuadros();
-        padding: 0;
-        width: 100%;
-        height: auto;
-
-        &:hover{
-            transform: scale($escalaHover, $escalaHover);
-            opacity: 1;
-            transition: $transicionHover;
-        }
-    }
-
-    &__titulo{
-        color: $colorPrincipal;
-        margin: 0;
-        padding-top: $paddingInterno;
-        padding-bottom: $paddingInterno/3;
-        text-align: left;
-        font-weight: bolder;
-    }
-    
-    &__parrafo{
-        color: $colorBase;
-        margin: 0;
-    }
-}
-/* FIN GRILLA Y SECCIÓN DE IMÁGENES */
-
-/* SECCIÓN ÍCONO FLOTANTE */
-.seccionIconoFlotante{
-    background-color: $colorWhatsapp; 
-    padding: 0.25rem; 
-    border-radius: 3rem; 
-    position: fixed;
-    z-index: 2;
-    right: 1.875rem;
-    bottom: 1.875rem;
-
-    &__imagen{
-        @include dimensiones(3rem, 3rem);
-    }
-}
-
-
-/* FIN SECCIÓN ÍCONO FLOTANTE*/
-
 .icono{
-    @include dimensiones(0.875rem, 0.875rem);
+    @include dimensiones($tamanioIcono, $tamanioIcono);
 }
-
-/* ARTÍCULOS */
-.articulo{
-    @include recuadros();
-
-    &__titulo{
-        color: $colorBase;
-        font-weight: bold;
-    }
-
-    &__parrafo{
-        color: $colorBase;
-        font-size: large;
-    }
-
-    &__parrafo--acotacion{
-        color: $colorBase;
-        font-size: small;
-    }
-}
-
-.articulo--principal{
-    @extend .articulo;
-    @include secciones($colorFondoPrincipal, $colorBase);
-
-    .articulo__titulo{
-        color: $colorPrincipal;
-    }
-}
-
-.articulo--secundario{
-    @extend .articulo;
-    @include secciones($colorFondoSecundario, $colorBase);
-}
-/* FIN ARTÍCULOS */
-
-/* ACCORDION */
-#articuloAccordion{
-    margin-top: $paddingSecciones;
-}
-
-.accordion-button:not(.collapsed){
-    @include secciones($colorPrincipal, $colorFondoBase); 
-    font-weight: bold;
-}
-
-.accordion-button:focus{
-    border-color: $colorFondoPrincipal;
-    box-shadow: 0 0 0.25rem $colorPrincipal;
-}
-
-.accordion-body{
-    font-size: small;
-}
-/* FIN ACCORDION */
-
-@mixin mixinContenedorItemFormulario(){
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 0.625rem;
-}
-
-/* CONTENEDOR DEL ITEM DEL FORMULARIO */
-.contenedorItemFormulario{
-    @include mixinContenedorItemFormulario();
-    
-    &__etiqueta{
-        width: 40%;
-        font-size: 1rem;
-    }
-
-    &__input{
-        width: 60%;
-    }
-
-    &__boton{
-        width: 100%;
-        @include secciones($colorPrincipal, $colorFondoBase); 
-
-        &:hover{
-            @include secciones($colorFondoBase, $colorPrincipal);
-        }
-    }
-    
-    
-
-}
-
-.contenedorItemFormulario--checkbox{
-    @extend .contenedorItemFormulario;
-    justify-content: space-between;
-}
-/* FIN CONTENEDOR */
-
-#articuloImportante{
-    margin-top: $paddingSecciones;
-}
-
-/* DEFINICIÓN DE GRILLAS */
-@for $i from 1 through $cantidadMaximaSecciones {
-    #seccion#{$i}{
-        grid-area: seccion#{$i};
-    }
-}
-
-#video{
-    grid-area: video;
-}
-
-#articulo1{
-    grid-area: articulo1;
-}
-
-#articulo2{
-    grid-area: articulo2;
-}
-/* FIN DEFINICIÓN GRILLAS */
 
 /* INICIO MEDIA QUERIES */
 @media only screen and (max-width: 600px){
@@ -371,17 +76,7 @@ main{
         @include seccionesGrilla();
     }
 
-    .mainHome{
-        grid-template-columns: 100%;
-        grid-template-rows: auto 1fr 1fr;
-        grid-template-areas:    "video"
-                                "articulo1"
-                                "articulo2";
-
-        @include seccionesGrilla();
-    }
-
-    .contenedorSeccionesPiePagina{
+    .contenedor-secciones-pie-pagina{
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -402,20 +97,29 @@ main{
     }
 
     /* CONTENEDOR DEL FORMULARIO */
-    .contenedorItemFormulario{
+    .contenedor-item-formulario{
         flex-direction: column;
 
         &__etiqueta{
             width: 100%;
-            font-size: 0.8rem;
+            font-size: $tamanioTituloFormularioResponsive;
         }
     
         &__input{
             width: 100%;
         }
+
+        &__boton{
+            margin-bottom: $paddingHeader/2;
+        }
+    }
+
+    .articulo-seccion-principal{
+        margin-top: $paddingHeader;
+        margin-bottom: $paddingHeader;
     }
     
-    .contenedorItemFormulario--checkbox{
+    .contenedor-item-formulario--checkbox{
         @include mixinContenedorItemFormulario();
         justify-content: space-between;
     }
@@ -432,7 +136,6 @@ main{
                                 "seccion4"
                                 "seccion5"
                                 "seccion6";
-
         @include seccionesGrilla();
     }
 
@@ -460,16 +163,6 @@ main{
         @include seccionesGrilla();
     }
 
-    .mainHome{
-        grid-template-columns: 100%;
-        grid-template-rows: auto 1fr 1fr;
-        grid-template-areas:    "video"
-                                "articulo1"
-                                "articulo2";
-
-        @include seccionesGrilla();
-    }
-
     .subseccionContacto{
         width: 100%;
     }
@@ -483,34 +176,41 @@ main{
     }
 
     /* CONTENEDOR DEL FORMULARIO */
-    .contenedorItemFormulario{
-        margin: 0 0 0.625rem 0;
+    .contenedor-item-formulario{
+        margin: 0 0 $paddingFormulario 0;
         flex-direction: column;
     
         &__etiqueta{
             width: 100%;
-            font-size: 0.85rem;
+            font-size: $tamanioTituloFormularioResponsive;
         }
     
         &__input{
             width: 100%;
         }
+
+        &__boton{
+            margin-bottom: $paddingHeader/2;
+        }
     }
-    
-    .contenedorItemFormulario--checkbox{
+
+    .contenedor-item-formulario--checkbox{
         @include mixinContenedorItemFormulario();
-        //justify-content: space-between;
     }
     /* FIN CONTENEDOR */
+
+    .articulo-seccion-principal{
+        margin-top: $paddingHeader;
+        margin-bottom: $paddingHeader;
+    }
 }
 
 @media only screen and (min-width: 992px){
     #seccionIndumentaria{
-        grid-template-columns: 50% 50%;
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-areas:    "seccion1 seccion2"
-                                "seccion3 seccion4"
-                                "seccion5 seccion6";
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:    "seccion1 seccion2 seccion3"
+                                "seccion4 seccion5 seccion6";
 
         @include seccionesGrilla();
     }
@@ -542,6 +242,11 @@ main{
         align-items: stretch;
     }
 
+    .articulo-seccion-principal{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
     .subseccionContacto{
         width: 50%;
     }
@@ -556,26 +261,22 @@ main{
         margin-top: 0;
     }
 
-    .mainHome{
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 2fr 1fr;
-        grid-template-areas:    "video video"
-                                "articulo1 articulo2";
-
-        @include seccionesGrilla();
-    }
-
-    .contenedorItemFormulario{
+    .contenedor-item-formulario{
         @include mixinContenedorItemFormulario();
         flex-direction: row;
     
         &__etiqueta{
             width: 40%;
-            font-size: 1rem;
+            font-size: $tamanioParrafoArticulo;
         }
     
         &__input{
             width: 60%;
+            margin-left: $paddingHeader/2;
+        }
+
+        &__boton{
+            margin-left: $paddingHeader/2;
         }
     }
 }
